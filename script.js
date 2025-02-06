@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         result.classList.remove("hidden");
         letter.classList.add("hidden");
         createHearts();
-        title.textContent = "💖 ¡Snoopy Feliz, Mi Amor! 💖";
+        title.textContent = "💖 ¡Snoopy Feliz! 💖";
         snoopy.src = "snoopy_celebratio.png"; // Cambia la imagen de Snoopy
         backgroundMusic.src = "celebration_music.mp3"; // Cambia la música
         backgroundMusic.play();
