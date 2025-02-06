@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Respuesta "Sí"
     yesBtn.addEventListener("click", function () {
-        result.innerHTML = "🎉 ¡Yuju! ¡Eres mi San Valentín! 💖";
+        result.innerHTML = "🎉 ¡SIUUUU! ¡Sos San Valentín! 💖";
         result.classList.remove("hidden");
         letter.classList.add("hidden");
         createHearts();
