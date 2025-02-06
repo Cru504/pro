@@ -1,15 +1,49 @@
-document.getElementById('openLetterBtn').addEventListener('click', function() {
-    document.getElementById('letter').classList.remove('hidden');
-    document.getElementById('openLetterBtn').classList.add('hidden');
-});
+document.addEventListener("DOMContentLoaded", function () {
+    const openLetterBtn = document.getElementById("openLetterBtn");
+    const letter = document.getElementById("letter");
+    const yesBtn = document.getElementById("yesBtn");
+    const noBtn = document.getElementById("noBtn");
+    const result = document.getElementById("result");
+    const snoopy = document.getElementById("snoopy");
+    const heartsContainer = document.getElementById("hearts");
 
-document.getElementById('yesBtn').addEventListener('click', function() {
-    document.getElementById('result').innerHTML = "<h2>🥳 ¡Eso! ¡Eres mi San Valentín! 💖</h2>";
-    document.getElementById('result').classList.remove('hidden');
-});
+    // Abrir la carta
+    openLetterBtn.addEventListener("click", function () {
+        letter.classList.remove("hidden");
+        openLetterBtn.classList.add("hidden");
+        snoopy.style.transform = "scale(1.1)";
+    });
 
-document.getElementById('noBtn').addEventListener('click', function() {
-    document.getElementById('result').innerHTML = "<h2>😠 ¡Dale al Sí!</h2>";
-    document.getElementById('result').classList.remove('hidden');
-    document.getElementById('noBtn').style.display = 'none';
+    // Respuesta "Sí"
+    yesBtn.addEventListener("click", function () {
+        result.innerHTML = "🎉 ¡Yuju! ¡Eres mi San Valentín! 💖";
+        result.classList.remove("hidden");
+        letter.classList.add("hidden");
+        createHearts();
+    });
+
+    // Respuesta "No" (con broma)
+    noBtn.addEventListener("mouseover", function () {
+        noBtn.style.position = "absolute";
+        noBtn.style.left = Math.random() * 80 + "vw";
+        noBtn.style.top = Math.random() * 80 + "vh";
+    });
+
+    noBtn.addEventListener("click", function () {
+        result.innerHTML = "😢 ¡Oh no! Snoopy está triste... Pero sigue intentando. 🐾";
+        result.classList.remove("hidden");
+        letter.classList.add("hidden");
+    });
+
+    // Función para crear corazones animados
+    function createHearts() {
+        for (let i = 0; i < 50; i++) {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "💖";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+            heartsContainer.appendChild(heart);
+        }
+    }
 });
