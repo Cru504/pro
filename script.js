@@ -4,7 +4,7 @@ document.getElementById('openLetterBtn').addEventListener('click', function() {
 });
 
 document.getElementById('yesBtn').addEventListener('click', function() {
-    document.getElementById('result').innerHTML = "<h2>🥳 ¡Yay! ¡Eres mi San Valentín! 💖</h2>";
+    document.getElementById('result').innerHTML = "<h2>🥳 ¡Eso! ¡Eres mi San Valentín! 💖</h2>";
     document.getElementById('result').classList.remove('hidden');
 });
 
