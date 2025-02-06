@@ -22,12 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Respuesta "Sí"
     yesBtn.addEventListener("click", function () {
-        result.innerHTML = "🎉 ¡Yuju! ¡Eres mi San Valentín! 💖";
+        result.innerHTML = "🎉 ¡SIIUUUUU! ¡Te quiero! 💖";
         result.classList.remove("hidden");
         letter.classList.add("hidden");
         createHearts();
-        title.textContent = "💖 ¡Feliz San Valentín, Mi Amor! 💖";
-        snoopy.src = "snoopy_celebration.png"; // Cambia la imagen de Snoopy
+        title.textContent = "💖 ¡Snoopy Feliz, Mi Amor! 💖";
+        snoopy.src = "snoopy_celebratio.png"; // Cambia la imagen de Snoopy
         backgroundMusic.src = "celebration_music.mp3"; // Cambia la música
         backgroundMusic.play();
     });
