@@ -8,20 +8,24 @@
 </head>
 <body>
     <div class="container">
-        <h1>💖 ¡Entrega Especial! 💖</h1>
+        <h1 id="title">💖 ¡Hola, Mi Amor! 💖</h1>
         <div class="snoopy">
             <img src="snoopy_love.png" alt="Snoopy enamorado" id="snoopy">
         </div>
         <button id="openLetterBtn">💌 Abrir Carta</button>
         <div id="letter" class="hidden">
             <p>Querida Michelle,</p>
-            <p>Tu sonrisa ilumina mis días y tu risa es la melodía que alegra mi corazón. En cada instante a tu lado, el tiempo parece detenerse.</p>
+            <p>Desde el momento en que entraste en mi vida, todo se llenó de colores. Tu sonrisa es mi luz, tu risa mi melodía favorita y tu amor mi mayor regalo.</p>
             <p>¿Quieres ser mi San Valentín? 💕</p>
             <button id="yesBtn">🥰 ¡Sí!</button>
             <button id="noBtn">😒 No</button>
         </div>
         <div id="result" class="hidden"></div>
         <div id="hearts" class="hearts-container"></div>
+        <audio id="backgroundMusic" loop>
+            <source src="love_music.mp3" type="audio/mpeg">
+            Tu navegador no soporta audio.
+        </audio>
     </div>
     <script src="script.js"></script>
 </body>
